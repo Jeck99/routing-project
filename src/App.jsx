@@ -1,16 +1,15 @@
 import { Link, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import Router from "./Router";
-
-export const pages = ["home", "about", "contact"];
+import Header from "./components/featurs/Header/Header";
+import Footer from "./components/featurs/Footer/Footer";
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {pages.map(pagePath => (
-          <Link to={pagePath}>{pagePath}</Link>
-        ))}
+        <Header />
         <Router />
+        <Footer />
       </BrowserRouter>
     </div>
   );

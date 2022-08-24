@@ -1,4 +1,4 @@
-import { Home, About, ContactUs } from "./components/pages";
+import { Home, About, ContactUs,PageNotFound } from "./components/pages";
 import {Routes, Route} from 'react-router-dom'
 
   export default function Router() {
@@ -7,6 +7,7 @@ import {Routes, Route} from 'react-router-dom'
         <Route path="/" element={<Home/>}/>
         <Route path="about" element={<About/>}/>
         <Route path="contact" element={<ContactUs/>}/>
+        <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     )
   }

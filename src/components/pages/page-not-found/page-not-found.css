@@ -1,0 +1,8 @@
+#gif_404{
+    height: 90%;
+    box-shadow: 3px 3px 4px blue;
+}
+#gif_404:hover{
+    height: 100%;
+    box-shadow: 7px 7px 4px rgb(125, 125, 234);
+}
