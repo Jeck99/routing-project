@@ -1,14 +1,12 @@
 import { Home, About, ContactUs } from "./components/pages";
+import {Routes, Route} from 'react-router-dom'
 
-  export default function Router({page}) {
-    switch (page) {
-      case "home":
-        return <Home />;
-      case "about":
-        return <About />;
-      case "contact":
-        return <ContactUs />;
-      default:
-        break;
-    }
+  export default function Router() {
+    return(
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="about" element={<About/>}/>
+        <Route path="contact" element={<ContactUs/>}/>
+      </Routes>
+    )
   }
