@@ -1,17 +1,31 @@
-import { Home, About, ContactUs, PageNotFound } from "./components/pages";
+import {
+  Home,
+  About,
+  ContactUs,
+  PageNotFound,
+  Users,
+} from "./components/pages";
 import { Routes, Route } from "react-router-dom";
-import MoviesProvider from "./movie-context";
-
+import TextProvider from "./contexts/text-context";
+import UsersProvider from "./contexts/users-context";
 
 export default function Router() {
   return (
-    <MoviesProvider>
+    <TextProvider>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<ContactUs />} />
+        <Route
+          path="users"
+          element={
+            <UsersProvider>
+              <Users />
+            </UsersProvider>
+          }
+        />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
-    </MoviesProvider>
+    </TextProvider>
   );
 }
